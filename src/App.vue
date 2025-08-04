@@ -1,11 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="app">
+    <nav>
+      <RouterLink to="/">Home</RouterLink> |
+      <RouterLink to="/about">About</RouterLink>
+    </nav>
+    <RouterView />
+  </div>
 </template>
 
-<style scoped></style>
+<style lang="css" scoped>
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+</style>
